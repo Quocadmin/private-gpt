@@ -158,3 +158,68 @@ This project has been strongly influenced and supported by other amazing project
 [LlamaCpp](https://github.com/ggerganov/llama.cpp),
 [Chroma](https://www.trychroma.com/)
 and [SentenceTransformers](https://www.sbert.net/).
+
+
+1. PrivateGPT là gì?
+PrivateGPT là một dự án mã nguồn mở giúp bạn hỏi và tương tác với AI về tài liệu cá nhân (file PDF, Word, text, v.v.) một cách riêng tư, không cần Internet. Tức là bạn có thể tải tài liệu vào hệ thống, rồi hỏi AI các câu hỏi liên quan, mà dữ liệu không bị gửi ra ngoài máy của bạn.
+
+Thích hợp cho những ai quan tâm tới bảo mật và quyền riêng tư (ví dụ: công ty, ngành y tế, pháp lý).
+
+Tất cả quá trình xử lý đều diễn ra trên máy tính cá nhân hoặc server nội bộ.
+
+2. PrivateGPT hoạt động như thế nào?
+Dự án này cung cấp một API (giao diện lập trình ứng dụng), giúp bạn xây dựng các ứng dụng AI riêng tư liên quan đến tài liệu. API này chia làm hai phần chính:
+
+a. High-level API (Dễ dùng)
+Tự động xử lý tài liệu: tải tài liệu lên, hệ thống tự động phân tích, chia nhỏ, tạo metadata, sinh embedding, lưu trữ, v.v.
+
+Chat với AI về tài liệu: Hỏi đáp, tóm tắt, trích xuất thông tin dựa trên nội dung tài liệu đã nạp.
+
+b. Low-level API (Nâng cao)
+Cho phép lập trình viên can thiệp sâu vào từng bước như: sinh embedding, truy xuất các đoạn văn bản liên quan nhất cho một truy vấn.
+
+3. Giao diện & Công cụ
+Gradio UI: Có sẵn một giao diện web để bạn thử nghiệm hỏi đáp với AI về tài liệu.
+
+Hỗ trợ nhiều công cụ khác như: script tải model hàng loạt, script nạp tài liệu, theo dõi thư mục tài liệu, v.v.
+
+4. Tại sao lại có PrivateGPT?
+Các mô hình AI lớn (LLM) rất hữu ích, nhưng nhiều doanh nghiệp/ngành nghề không dám dùng vì lo lộ dữ liệu.
+
+PrivateGPT giúp mọi người tận dụng AI mà không phải chia sẻ dữ liệu cho bên thứ ba.
+
+5. Kiến trúc bên trong
+Sử dụng FastAPI để xây dựng API, tuân theo chuẩn API của OpenAI.
+
+Dùng framework LlamaIndex cho các pipeline RAG (Retrieval Augmented Generation) – kết hợp AI và tìm kiếm dữ liệu trong tài liệu.
+
+Các thành phần chính như LLM (mô hình AI), Vector Database, Embedding đều có thể thay đổi/dễ mở rộng.
+
+Có sẵn code mẫu, kiến trúc rõ ràng, dễ mở rộng và đóng góp.
+
+6. Tài liệu & Cộng đồng
+Tài liệu chi tiết: https://docs.privategpt.dev/
+
+Có Discord, Twitter, các nhóm cộng đồng để trao đổi và hỗ trợ.
+
+7. Đóng góp & phát triển
+Chào đón mọi đóng góp mã nguồn (PR, ý tưởng mới, sửa lỗi...).
+
+Có bảng dự án công khai để theo dõi tiến độ, tính năng.
+
+Nên kiểm tra code (make check) và test trước khi gửi PR.
+
+8. Đối tác & Hỗ trợ
+Dùng Qdrant (vector DB), Fern (tài liệu, SDK), LlamaIndex (pipeline AI).
+
+Có cảm hứng/tích hợp từ các dự án nổi tiếng như LangChain, GPT4All, Llama.cpp, Chroma, SentenceTransformers.
+
+9. Bạn có thể dùng PrivateGPT cho?
+Tìm kiếm, hỏi đáp trên kho tài liệu công ty/cá nhân.
+
+Tích hợp vào các ứng dụng nội bộ cần bảo mật thông tin.
+
+Xây dựng chatbot AI riêng cho doanh nghiệp.
+
+10. Tổng kết ngắn gọn
+PrivateGPT = ChatGPT cho tài liệu cá nhân, chạy hoàn toàn cục bộ, cực kỳ bảo mật, dễ tích hợp, dễ phát triển thêm.
